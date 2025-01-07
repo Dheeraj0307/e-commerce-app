@@ -1,0 +1,31 @@
+/* // about us // */
+
+.aboutusInfo {
+    padding: 30px 4%;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aboutusInfo div {
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1.5px;
+    line-height: 35px;
+    gap: 20px;
+}
+
+.aboutusInfo h1 {
+    text-align: center;
+}
+
+.aboutusInfo h1 span {
+    color: var(--primary-dark);
+}
+
+.addressbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,25 @@
+/* // error page */
+
+.error-page {
+    display: flex;
+    gap: 20px;
+    padding: 4% 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 60px - 356px);
+}
+
+.error-page h2 {
+    font-size: 70px;
+    font-weight: normal;
+}
+
+.error-page h3 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.error-page p {
+    color: var(--gray);
+}

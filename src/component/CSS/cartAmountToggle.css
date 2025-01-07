@@ -1,0 +1,12 @@
+/* // cart-amount-toogle //  */
+
+.amt-toggle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.amt-toggle button {
+    padding: 5px 10px;
+    width: 35px;
+}

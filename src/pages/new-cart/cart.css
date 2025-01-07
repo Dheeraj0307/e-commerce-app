@@ -1,0 +1,146 @@
+.grid-cart-container {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.grid-cart-headings,
+.grid-cart-products {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr 0.7fr 0.7fr 0.7fr 0.7fr;
+    column-gap: 10px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.grid-cart-products {
+    width: 100%;
+    border-top: 2px solid rgb(193, 193, 193);
+    min-height: 106px;
+}
+
+.grid-cart-headings {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#para1,
+#para2,
+#para3,
+#para4,
+#para5,
+#para6 {
+    text-align: center;
+    width: 100%;
+    justify-items: center;
+}
+
+#para1 {
+    min-height: 100px;
+}
+
+
+.empty-cart {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100vh - 60px - 380px);
+    min-height: 350px;
+}
+
+
+/* // cart-btns //  */
+
+.cart-two-btns {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* // price-section // */
+
+.price-section {
+    width: 300px;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--gray-light);
+    justify-self: end;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.price-section div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.price-section hr {
+    width: 100%;
+}
+
+
+@media screen and (max-width:1520px) {
+
+    .grid-cart-container {
+        margin: 0 10px;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+
+    .grid-cart-headings,
+    .grid-cart-products {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+
+    .cart-hide {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 688px) {
+
+    .grid-cart-headings {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-cart-products {
+        min-height: 165px;
+    }
+
+    .cart-hide-II {
+        display: none;
+    }
+
+    .grid-cart-products {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+
+    #para1 {
+        flex: 1 2 40%;
+    }
+
+    #para2,
+    #para4 {
+        flex: 1 1 40%;
+    }
+
+    #para5,
+    #para6 {
+        flex: 4 1;
+    }
+
+}

@@ -1,0 +1,43 @@
+/* //home // */
+
+.hero-section {
+    display: flex;
+    max-width: 1500px;
+    margin: 50px auto;
+    justify-content: space-between;
+    position: relative;
+    gap: 50px;
+    padding: 3% 4%;
+    overflow: hidden;
+}
+
+.hero-section div div b {
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.hero-section div div h1 {
+    font-size: 50px;
+    font-weight: 550;
+}
+
+
+.back-green {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 300px;
+    height: 200px;
+    background-color: var(--primary-light);
+}
+
+.back-green-inverts {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 300px;
+    height: 200px;
+    background-color: var(--primary-light);
+}

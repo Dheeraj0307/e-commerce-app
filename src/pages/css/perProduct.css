@@ -1,0 +1,149 @@
+/* //  single product  //  */
+
+.productContainer {
+    max-width: 1500px;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto;
+    gap: 25px;
+}
+
+.leftSidebar {
+    width: 100%;
+    min-height: 30vw;
+    flex: 1 0 40%;
+    height: max-content;
+    align-self: flex-start;
+    text-align: center;
+}
+
+.Sk-leftSideImg {
+    max-width: 410px;
+    margin: auto;
+}
+
+.RightSidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.productInfo {
+    font-size: 1.4rem;
+}
+
+.headingH1 {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.star-outer {
+    position: relative;
+    display: inline-block;
+}
+
+.star-outer::before {
+    content: '\2605 \2605 \2605 \2605 \2605';
+    color: gray;
+}
+
+
+.star-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.star-inner::before {
+    content: '\2605 \2605 \2605 \2605 \2605';
+    color: gold;
+}
+
+.mrp b {
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.mart-product-features {
+    display: flex;
+    width: 100%;
+    font-size: 1rem;
+    margin: 20px 0;
+    justify-content: space-between;
+    max-width: 800px;
+}
+
+.mart-product-features div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mart-product-features div div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    padding: 10px 1px;
+    border-radius: 50%;
+    background-color: var(--gray-light);
+}
+
+.feature-icons {
+    color: var(--primary);
+}
+
+.buy-section {
+    display: flex;
+    gap: 30px;
+}
+
+.product_description {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.review_section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+
+.per-reviews {
+    padding: 20px 10px;
+    flex: 1 1 40%;
+    margin: 10px 0;
+    border: 1px solid;
+}
+
+.user_message {
+    width: 100%;
+    text-align: start;
+    padding: 10px 0;
+}
+
+
+.profilePic {
+    display: flex;
+    width: fit-content;
+    column-gap: 20px;
+}
+
+.user_message div {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+}

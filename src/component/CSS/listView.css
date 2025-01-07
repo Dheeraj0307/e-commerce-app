@@ -1,0 +1,38 @@
+ .figure-list-view-img {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .list-view-img {
+     width: 80%;
+ }
+
+
+ .container {
+     max-width: 1000px;
+     margin: auto;
+ }
+
+
+ .grid-two-column {
+     display: grid;
+     column-gap: 20px;
+     grid-template-columns: 0.7fr 1fr;
+     border: 2px solid var(--primary-light);
+     padding: 20px;
+     margin: 20px 0;
+ }
+
+ .grid-two-column:hover {
+     z-index: 1;
+     box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+ }
+
+ .card-data {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     font-size: 1.3rem;
+     justify-content: space-evenly;
+ }

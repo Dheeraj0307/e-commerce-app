@@ -1,0 +1,41 @@
+.product-navbar {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    /* justify-content: space-between; */
+    max-width: 1000px;
+    margin: auto;
+}
+
+.icons-list {
+    flex: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-icon-list-btn {
+    background: var(--primary-dark);
+    color: white;
+}
+
+
+.product-availiable {
+    flex: 2 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+.drop-down-list {
+    flex: 1;
+    width: 100%;
+}
+
+.drop-down-list #sort {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 10px 5px;
+    border: 2px solid var(--primary-light);
+    border-radius: 7px;
+}

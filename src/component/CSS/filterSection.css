@@ -1,0 +1,60 @@
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+.filter-search {
+    width: 100%;
+}
+
+.filter-search form input {
+    width: 100%;
+    margin: auto;
+    padding: 10px 5px;
+    font-size: 1.3rem;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+}
+
+.filter-heading {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.filter-category {
+    width: 100%;
+}
+
+.select-filter-category #category {
+    width: 100%;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    padding: 10px 5px;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+}
+
+.filter-range {
+    width: 100%;
+}
+
+.filter-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.price-filter-range {
+    font-size: 1.3rem;
+}
+
+.price-filter-range input {
+    width: 100%;
+}

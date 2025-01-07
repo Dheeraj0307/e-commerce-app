@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-txt-color: gray;
+  --secondary--txt-color: rgb(48, 42, 42);
+}
+
+.form-container-formik {
+  max-width: 1000px;
+  width: 60vw;
+  margin: 5% auto;
+  display: flex;
+  font-family: "roboto";
+  border-radius: 4px;
+  box-shadow: 0 0 9px #6e6e6e;
+}
+
+.contact-map p {
+  font-size: 30px;
+  text-align: center;
+  padding: 4% 0 3% 0;
+  font-weight: 550;
+}
+
+
+.formLeftSide {
+  display: flex;
+  /* margin: auto; */
+  gap: 30px;
+  flex: 1;
+  color: var(--primary-txt-color);
+  font-size: 14px;
+  padding: 20px 25px;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.side-image {
+  width: 100%;
+  flex: 2;
+  height: auto;
+  background-image: url(../background/form-side.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.formik-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
+}
+
+input {
+  width: auto;
+  margin: 2px 0;
+  border: none;
+  outline: none;
+}
+
+p {
+  margin: 0;
+}
+
+.input-block:focus-within {
+  border: 2px solid gray;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid rgba(128, 128, 128, 0.385);
+}
+
+.input_label {
+  color: rgba(97, 96, 96, 0.936);
+  font-weight: 700;
+  letter-spacing: 0cap;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.para {
+  color: var(--secondary--txt-color);
+  font-size: 16px;
+}
+
+a {
+  color: rgb(151, 149, 149);
+}
+
+a:hover {
+  color: rgb(63, 63, 63);
+  text-decoration: underline;
+}
+
+.para h2 {
+  color: var(--secondary--txt-color);
+  font-size: 24px;
+}
+
+.error-msg {
+  color: rgba(255, 0, 0, 0.737);
+}
+
+.modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 615px) {
+
+  .form-container-formik {
+
+    width: calc(100% - 30px);
+    margin: 5% 15px;
+  }
+}

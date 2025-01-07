@@ -1,0 +1,9 @@
+.cart-image-name {
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+    max-width: 500px;
+    justify-content: center;
+}

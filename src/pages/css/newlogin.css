@@ -1,0 +1,141 @@
+:root{
+    --primary-clr:#dadce0;
+    --secondary-clr:rgb(79, 170, 26);
+    --hover-clr:rgb(65, 142, 21);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.loginParent{
+    position: absolute;
+    width: 100%;
+    max-height: calc(100vh - 60px);
+    top: 0;
+    left: 0;
+}
+
+.Loginlogo{
+    display: flex;
+    justify-content: center;
+  font-size: 2.3rem; 
+  cursor: pointer;
+  text-transform: uppercase; 
+  transform: skew(-7deg);  
+  color: var(--secondary-clr);
+  align-items: center;
+  gap: 10px;
+}
+
+.Loginlogo:hover{
+    color: var(--hover-clr);
+}
+
+.loginPageContainer{
+    max-width: 400px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    font-size: 1.2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px; 
+}
+
+@media screen and (min-width: 900px) { 
+    .loginPageContainer {
+        width: 45vw; 
+    }
+  } 
+
+.loginOptions{
+    display: flex;
+    gap: 25px; 
+}
+ 
+
+.loginOptions img{
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 35px; 
+    border: 1px solid var(--primary-clr);
+    border-radius: 7px;
+    box-sizing: content-box;
+}
+
+.loginOptions a:last-child img{   
+    background-color: #1877f2;
+}
+
+.divider{ 
+    width: 100%; 
+    position: relative; 
+}
+
+.divider hr{
+    width: 100%;
+    position: absolute;
+    top: 2px; 
+    border: none;
+    height: 1px;
+    background: var(--primary-clr);
+}
+
+.divider p{
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+    transform: translate(-50%,-50%);
+    padding: 0 10px;
+    background: white; 
+    color: var(--primary-clr);
+}
+
+.inputform{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.inputData{
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid var(--primary-clr);
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+#form-btn{
+    width: 100%;
+    border-radius: 5px;
+    background: var(--secondary-clr);
+    font-size: 1rem;
+    padding: 15px 0;
+    font-weight: 600;
+    color: white;
+}
+
+#form-btn:hover{
+    background: var(--hover-clr);
+}
+.form-link{
+    width: 100%;
+    text-align: center; 
+    font-weight: 650;
+}
+
+.form-link a{
+    color: var(--secondary-clr);
+    cursor: pointer;
+    text-decoration: none;
+}
+.form-link a:hover{
+    background: #ebe4ff; 
+}
