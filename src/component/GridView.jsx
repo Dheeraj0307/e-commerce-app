@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Product from '../component/Product'
 import { useFilterContext } from '../context/filter_context'
 import Skelton from './skeleton-loading/Skelton';
 import { motion } from 'framer-motion'
 import './CSS/gridView.css';
 import '../App.css'
+import Pagination from './advance/advancePagination'
 
 const GridView = ({ products }) => {
 
-    const { isLoading } = useFilterContext();
+    const { isLoading, currentPage, setCurrentPage } = useFilterContext();
 
     const containerVarient = {
         hidden: { opacity: 0 },
@@ -19,6 +20,16 @@ const GridView = ({ products }) => {
             },
         },
     }
+
+    const itemPerPage = 6;
+
+
+    const totalPages = Math.ceil(products.length / itemPerPage);
+
+    const lastItemIndex = currentPage * itemPerPage
+    const firstItemIndex = lastItemIndex - itemPerPage
+
+    const thisPageItems = products.slice(firstItemIndex, lastItemIndex);
 
     useEffect(() => {
 
@@ -32,17 +43,21 @@ const GridView = ({ products }) => {
         </div>
 
     )
-    return (
+    return (<>
         <motion.div variants={containerVarient}
             initial='hidden'
             animate='show'
             className='grid-view'>
-            {products.map((elem) => {
+            {thisPageItems.map((elem) => {
                 return <Product key={elem.id} {...elem} />
             })}
 
         </motion.div>
-    )
+
+
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={totalPages} />
+
+    </>)
 }
 
 export default GridView

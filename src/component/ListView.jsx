@@ -5,10 +5,25 @@ import FormatPrice from '../helpers/FormatPrice'
 import Swal from 'sweetalert2';
 import { motion } from 'framer-motion';
 import './CSS/listView.css'
+import Pagination from './advance/advancePagination'
+
+import { useFilterContext } from '../context/filter_context';
+
 
 const ListView = ({ products }) => {
 
     const navigate = useNavigate();
+    const { currentPage, setCurrentPage } = useFilterContext();
+
+    const itemPerPage = 4;
+
+    const totalPages = Math.ceil(products.length / itemPerPage);
+
+    const lastItemIndex = currentPage * itemPerPage
+    const firstItemIndex = lastItemIndex - itemPerPage
+
+    const thisPageItems = products.slice(firstItemIndex, lastItemIndex);
+
 
     const check = (id) => {
         const token = localStorage.getItem('token');
@@ -39,11 +54,12 @@ const ListView = ({ products }) => {
     return (
         <div className='list-view container'>
 
-            {products.map((elem) => {
+            {thisPageItems.map((elem, index) => {
                 const { id, title, thumbnail, price, category, rating, description } = elem;
 
                 return (
                     <motion.div
+                        key={index}
                         animate={{ translateY: '50%', opacity: 0 }}
                         whileInView={{ translateY: 0, opacity: 1 }}
                         transition={{ type: 'tween', duration: 1 }}
@@ -64,6 +80,10 @@ const ListView = ({ products }) => {
                     </motion.div>
                 )
             })}
+
+
+            <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={totalPages} />
+
         </div>
     )
 }

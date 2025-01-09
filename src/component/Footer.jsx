@@ -20,11 +20,17 @@ const Footer = () => {
                 icon: "success",
                 title: "Thank you for Subscribing",
                 showConfirmButton: false,
-                timer: 1500
+                timer: 1500,
+                scrollbarPadding: false,
             });
 
             setInput('')
         }
+    }
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        setInput(e.target.value)
     }
 
     return (
@@ -43,7 +49,7 @@ const Footer = () => {
                         <div>
                             <h2>Subscribe to get latest updates.</h2>
                             <form onSubmit={handleResponse} className='form-in-footer'>
-                                <input type="email" required placeholder='YOUR EMAIL...' onChange={(e) => setInput(e.target.value)} value={input} />
+                                <input type="email" required placeholder='YOUR EMAIL...' onChange={handleChange} value={input} />
                                 <button type='submit'>Subscribe</button>
                             </form>
                         </div>

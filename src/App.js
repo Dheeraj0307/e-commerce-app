@@ -14,27 +14,25 @@ import AboutUs from './pages/AboutUs';
 import Filtered from './pages/Filtered';
 import Error from './pages/Error';
 import Products from './pages/Products';
-import useScrollToTop from './component/smoothScroll';
+import ScrollToTop from './component/smoothScroll';
 import Cart from './pages/new-cart/Cart';
 import PaymentPage from './pages/PaymentPage';
 import PaymentSuccess from './pages/PaymentSuccess';
-
+import Pagination from './component/Pagination'
 
 function App() {
-
   const [showNav, setShowNav] = useState(true)
 
   const memoizedSetShowNav = useCallback((value) => {
     setShowNav(value);
   }, []);
 
-  useScrollToTop();
-
   return (
 
     <div className='app-layout'>
       {showNav ? <ResponsiveNav setShowNav={memoizedSetShowNav} /> : <></>}
       <main className='app-content'>
+        <ScrollToTop />
         <Routes>
           <Route index element={<HomePage />} />
           <Route path='/products' element={<Products setShowNav={setShowNav} />} />
@@ -48,6 +46,7 @@ function App() {
           <Route path='*' element={<Error />} />
           <Route path='/payment' element={<PaymentPage />} />
           <Route path='/payment-success' element={<PaymentSuccess />} />
+          <Route path='/pagination' element={<Pagination />} />
         </Routes>
       </main>
       {showNav ? <Footer setShowNav={setShowNav} /> : <></>}
