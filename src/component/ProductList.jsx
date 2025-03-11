@@ -5,6 +5,7 @@ import ListView from '../component/ListView';
 
 const ProductList = () => {
 
+
     const { filter_product, grid_view } = useFilterContext();
 
     if (grid_view) {

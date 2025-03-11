@@ -52,7 +52,7 @@ const PerProduct = () => {
 
     useEffect(() => {
         getSingleProduct(`${API}/${id}`);
-    }, [])
+    }, [getSingleProduct, id])
 
 
     if (isSingleLoading) return <SingleProductSkeleton />
@@ -121,9 +121,10 @@ const PerProduct = () => {
 
                     <div className='buy-section'>
 
+                        <button className='googleBtn' onClick={handleCart}> Add to Cart</button>
 
-                        {/* <button className='btns' onClick={buyNow}> Buy now</button> */}
                         <GooglePayButton
+                            className='googleBtn'
                             environment='TEST'
                             buttonSizeMode='fill'
                             paymentRequest={{
@@ -178,8 +179,6 @@ const PerProduct = () => {
                                 console.error('Google Pay Error:', error); // Log errors for debugging
                             }}
                         />
-
-                        <button className='btns' onClick={handleCart}> Add to Cart</button>
 
                     </div>
                     <hr />

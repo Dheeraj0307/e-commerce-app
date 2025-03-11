@@ -1,4 +1,3 @@
-
 const Pagination = ({ setCurrentPage, totalPages, currentPage }) => {
 
     const pages = []

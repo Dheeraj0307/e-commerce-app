@@ -12,7 +12,7 @@ const FilterSection = () => {
     const getUniquedata = (data, prop) => {
 
         let pata = data.map((arr) => {
-            return arr[prop]
+            return arr[prop] 
         })
         pata = ['All', ...new Set(pata)]
 
@@ -56,7 +56,7 @@ const FilterSection = () => {
                         <FormatPrice price={price} />
                     </p>
 
-                    <input type="range" name="price" min={min_price} max={max_price + 0.1} value={price} onChange={handleChange} />
+                    <input type="range" name="price" min={min_price} max={Math.ceil(max_price)} value={price} onChange={handleChange} />
 
                 </div>
             </div>

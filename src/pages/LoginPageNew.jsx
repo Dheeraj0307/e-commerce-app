@@ -4,8 +4,6 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import './css/newlogin.css';
 import logo from '../icons-size-logo/sasta-logo.png'
-import googleLogo from "../icons-size-logo/google.svg";
-import facebookLogo from "../icons-size-logo/facebook.svg";
 
 const LoginPageNew = ({ setShowNav }) => {
 
@@ -27,29 +25,28 @@ const LoginPageNew = ({ setShowNav }) => {
         setShowNav(true)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
+        // eve.holt@reqres.in
         try {
-            axios.post('https://reqres.in/api/login', {
+            const res = await axios.post('https://reqres.in/api/login', {
                 email: userLogin.email,
                 password: userLogin.password
-            }).then((res) => (
-                localStorage.setItem('token', JSON.stringify(res.data.token)),
-                toast.success("Login Successfully!"),
-                navigate('/'),
-                setShowNav(true)
-            )).catch(() => (
-                toast.error("Got some error! Try again")
-            ))
-
+            })
+            localStorage.setItem('token', res.data.token)
+            toast.success("Login Successfully!")
+            navigate('/')
+            setShowNav(true)
         } catch (error) {
-            console.log('why')
+            console.log(error.message || error,
+                'error in response'
+            )
         }
     }
 
     useEffect(() => {
         setShowNav(false)
-    }, [])
+    }, [setShowNav])
 
 
     return (

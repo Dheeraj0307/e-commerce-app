@@ -5,7 +5,7 @@ import axios from "axios";
 
 const FilterContext = createContext();
 
-const API = 'https://dummyjson.com/products';
+const API = 'https://dummyjson.com/products/?limit=0';
 
 const initialstate = {
     isLoading: false,
@@ -92,10 +92,14 @@ export const FilterProvider = ({ children }) => {
         dispatch({ type: 'REMOVE_ALL_FILTERS' })
     }
 
+    const homeFilter = (val) => {
+        dispatch({ type: 'HOMEFILTER', payload: val })
+    }
+
     useEffect(() => {
         dispatch({ type: 'FILTER_PRODUCTS' })
         dispatch({ type: 'SORTING_PRODUCT', payload: state.products });
-    }, [state.sorting_products, state.filter])
+    }, [state.sorting_products, state.filter, state.products])
 
     useEffect(() => {
         dispatch({ type: 'LOAD_FILTER_PRODUCTS', payload: state.products });
@@ -105,7 +109,7 @@ export const FilterProvider = ({ children }) => {
         getProducts(API);
     }, [])
 
-    return <FilterContext.Provider value={{ ...state, setGridView, setListView, Sorting, handleChange, clearFilter, getSingleProduct, currentPage, setCurrentPage }}>
+    return <FilterContext.Provider value={{ ...state, setGridView, setListView, Sorting, handleChange, clearFilter, getSingleProduct, currentPage, setCurrentPage, homeFilter }}>
         {children}
     </FilterContext.Provider>
 }

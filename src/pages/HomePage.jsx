@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import './css/homepage.css'
 
 const HomePage = () => {
-    const { products } = useFilterContext();
+    const { homeFilter } = useFilterContext();
     const navigate = useNavigate();
 
     const data = {
@@ -29,11 +29,8 @@ const HomePage = () => {
     // }
 
     const filterAccToSelect = (categoryType) => {
-        const dataFilter = products.filter((arr) => {
-            if (arr.category === categoryType) return arr
-        }
-        )
-        return navigate('/filtered', { state: dataFilter })
+        homeFilter(categoryType)
+        return navigate('/products')
     }
 
     const animation = {
@@ -65,16 +62,17 @@ const HomePage = () => {
                 {/* //features */}
 
                 <div className='feature-products'>
+
                     <motion.div variants={animation} animate='visible' initial='hidden' onClick={() => filterAccToSelect('beauty')}>
-                        <i> <img src='/images/3.jpg' alt="12" /> <span>beauty</span></i>
+                        <i> <img src='/images/3.webp' loading='lazy' alt="12" /> <span>beauty</span></i>
                         <p>beauty</p>
                     </motion.div>
                     <motion.div variants={animation} animate='visible' initial='hidden' onClick={() => filterAccToSelect('groceries')}>
-                        <i>  <img src='/images/1.jpg' alt="23" /> <span>groceries</span></i>
+                        <i>  <img src='/images/1.webp' loading='lazy' alt="23" /> <span>groceries</span></i>
                         <p>groceries</p>
                     </motion.div>
                     <motion.div variants={animation} animate='visible' initial='hidden' onClick={() => filterAccToSelect('furniture')}>
-                        <i> <img src='/images/2.jpg' alt="34" /><span>furniture</span></i>
+                        <i> <img src='/images/2.webp' loading='lazy' alt="34" /><span>furniture</span></i>
                         <p>furniture</p>
                     </motion.div>
 

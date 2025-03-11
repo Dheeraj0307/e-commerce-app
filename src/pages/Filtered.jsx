@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import Swal from 'sweetalert2';
-import { motion } from 'framer-motion';
+import Swal from 'sweetalert2'
+import { motion } from 'framer-motion'
 import './css/filtered.css'
 
 const Filtered = () => {

@@ -84,9 +84,9 @@ const Product = (curElem) => {
                     </motion.span>
                 </motion.figure>
 
-                <div className="card-data"  >
-                    <div className="cart-data-flex  ">
-                        <h3 className=''> {title} </h3>
+                <div className="card-data">
+                    <div className="cart-data-flex">
+                        <h3 className='cart-data-title'> {title} </h3>
                         <p className='cart-data-price'> <FormatPrice price={price} /></p>
                     </div>
                 </div>

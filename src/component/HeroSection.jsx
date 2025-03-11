@@ -58,7 +58,7 @@ const HeroSection = memo(({ mydata }) => {
                 transition={{ delay: 0.5, duration: 1 }}
                 className="hero-banner"
             >
-                <img src="/images/grocery.jpg" alt="Grocery" width={500} />
+                <img src="/images/grocery.webp" alt="Grocery" width={500} />
             </motion.div>
         </motion.div>
     );

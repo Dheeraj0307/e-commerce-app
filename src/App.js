@@ -43,10 +43,10 @@ function App() {
           <Route path='/contact-form' element={<Formik />} />
           <Route path='/aboutUs' element={<AboutUs />} />
           <Route path='/filtered' element={<Filtered />} />
-          <Route path='*' element={<Error />} />
           <Route path='/payment' element={<PaymentPage />} />
           <Route path='/payment-success' element={<PaymentSuccess />} />
           <Route path='/pagination' element={<Pagination />} />
+          <Route path='*' element={<Error />} />
         </Routes>
       </main>
       {showNav ? <Footer setShowNav={setShowNav} /> : <></>}

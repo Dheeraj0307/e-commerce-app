@@ -63,6 +63,15 @@ const filterReducer = (state, action) => {
                 }
             }
 
+        case 'HOMEFILTER':
+            return {
+                ...state,
+                filter: {
+                    ...state.filter,
+                    category: action.payload,
+                }
+            }
+
         case 'SET_GRID_VIEW':
             return {
                 ...state,

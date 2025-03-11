@@ -22,10 +22,6 @@ const Cart = () => {
         </>)
     }
 
-    const handleProceedToPayment = () => {
-        navigate("/payment", { state: { totalAmount: total_price } });
-    };
-
     return (<>
         <div className="grid-cart-container">
 
@@ -69,7 +65,7 @@ const Cart = () => {
             </div>
 
             <div style={{ textAlign: 'end', marginTop: '10px' }}>
-                {/* <button onClick={handleProceedToPayment}>Proceed to Payment</button> */}
+
                 <div>
                     <StripeCheckout
                         name='Total Payment'

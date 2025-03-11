@@ -4,6 +4,7 @@ const Pagination = ({ setCurrentPage, totalPages, currentPage }) => {
 
     const handlePageClick = (page) => {
         if (page !== currentPage) {
+            // window.scrollTo({ top: 0, behavior: "smooth" });
             setCurrentPage(page);
         }
     };
@@ -17,8 +18,8 @@ const Pagination = ({ setCurrentPage, totalPages, currentPage }) => {
 
         if (currentPage > 3) pages.push('...')
 
-        let startPage = Math.max(2, currentPage - range);
-        let endPage = Math.min(totalPages - 1, currentPage + range)
+        let startPage = Math.max(2, currentPage - range); //3
+        let endPage = Math.min(totalPages - 1, currentPage + range) //5
 
 
         for (let i = startPage; i <= endPage; i++) {

@@ -6,7 +6,7 @@ import './css/products.css'
 
 const Products = ({ setShowNav }) => {
 
-    useEffect(() => { setShowNav(true) }, [])
+    useEffect(() => { setShowNav(true) }, [setShowNav])
 
     return (
         <>
