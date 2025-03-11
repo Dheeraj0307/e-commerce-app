@@ -130,8 +130,6 @@ const filterReducer = (state, action) => {
 
             const { name, value } = action.payload;
 
-            console.log(value)
-
             return {
                 ...state,
                 filter: {

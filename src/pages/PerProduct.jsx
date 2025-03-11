@@ -52,7 +52,7 @@ const PerProduct = () => {
 
     useEffect(() => {
         getSingleProduct(`${API}/${id}`);
-    }, [getSingleProduct, id])
+    }, [])
 
 
     if (isSingleLoading) return <SingleProductSkeleton />

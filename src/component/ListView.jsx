@@ -47,10 +47,6 @@ const ListView = ({ products }) => {
         }
     }
 
-    useEffect(() => {
-
-    }, [])
-
     return (
         <div className='list-view container'>
 
@@ -71,10 +67,10 @@ const ListView = ({ products }) => {
 
                         <div className='card-data'>
                             <h3>{title}</h3>
-                            <p>
+                            <div>
                                 <p> <Star rating={rating} /> ({rating})</p>
                                 <p> <b>Price:</b><FormatPrice price={price} /></p>
-                            </p>
+                            </div>
                             <p>{description.slice(0, 150)}...</p>
                         </div>
                     </motion.div>

@@ -33,7 +33,7 @@ const LoginPageNew = ({ setShowNav }) => {
                 email: userLogin.email,
                 password: userLogin.password
             })
-            localStorage.setItem('token', res.data.token)
+            localStorage.setItem('token', JSON.stringify(res.data.token))
             toast.success("Login Successfully!")
             navigate('/')
             setShowNav(true)

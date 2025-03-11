@@ -70,7 +70,7 @@ const Cart = () => {
                     <StripeCheckout
                         name='Total Payment'
                         amount={(total_price + shipping_fee) * 84.91 * 100}
-                        currency="Inr"
+                        currency="INR"
                         token={completePayment}
                         allowRememberMe
                         stripeKey="pk_test_51QaY1FCHREKHbBbwga4n9rvRtuPn4pioCUQDn6JDg4MoXlU818QhXi5t0mwJO3zzLymYK20SVjEvOZVMaU2TMSR300T8yug4xv"
