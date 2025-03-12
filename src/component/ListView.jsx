@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Star from '../component/Star';
 import { useNavigate } from 'react-router-dom';
 import FormatPrice from '../helpers/FormatPrice'
@@ -10,7 +10,7 @@ import Pagination from './advance/advancePagination'
 import { useFilterContext } from '../context/filter_context';
 
 
-const ListView = ({ products }) => {
+const ListView = memo(({ products }) => {
 
     const navigate = useNavigate();
     const { currentPage, setCurrentPage } = useFilterContext();
@@ -56,11 +56,13 @@ const ListView = ({ products }) => {
                 return (
                     <motion.div
                         key={index}
-                        animate={{ translateY: '50%', opacity: 0 }}
+                        initial={{ translateY: '50%', opacity: 0 }}
                         whileInView={{ translateY: 0, opacity: 1 }}
                         transition={{ type: 'tween', duration: 1 }}
                         viewport={{ once: true }}
-                        className='grid-two-column' onClick={() => check(id)}>
+                        className='grid-two-column'
+                        onClick={() => check(id)}
+                    >
                         <figure className='figure-list-view-img' >
                             <img src={thumbnail} alt={category} className='list-view-img' />
                         </figure>
@@ -82,6 +84,6 @@ const ListView = ({ products }) => {
 
         </div>
     )
-}
+})
 
 export default ListView

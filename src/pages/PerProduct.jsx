@@ -11,7 +11,6 @@ import { TbReplace } from "react-icons/tb";
 import { MdOutlineSecurity } from "react-icons/md";
 
 import Star from '../component/Star';
-// import PageNavigation from '../component/PageNavigation';
 import { useFilterContext } from '../context/filter_context';
 import SingleProductSkeleton from '../component/skeleton-loading/SingleProductSkeleton';
 import FormatPrice from '../helpers/FormatPrice'
@@ -59,8 +58,6 @@ const PerProduct = () => {
 
     return (
         <div>
-            {/* <PageNavigation title={singleProduct.title} />                 project for later     */}
-
             <div className="productContainer">
 
                 <div className="leftSidebar">

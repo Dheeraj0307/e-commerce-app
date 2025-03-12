@@ -15,19 +15,6 @@ const HomePage = () => {
         name: 'Sasta Mart',
     };
 
-    // const getRandom = (min, max) => {
-    //     return Math.floor(Math.random() * (max - min) + min);
-    // }
-    // const kkk = () => {
-    //     const ran = getRandom(1, products.length);
-    //     products && (
-    //         products.filter((arr) => {
-    //             if (arr.id === ran)
-    //                 return (arr.thumbnail)
-    //         })
-    //     )
-    // }
-
     const filterAccToSelect = (categoryType) => {
         homeFilter(categoryType)
         return navigate('/products')

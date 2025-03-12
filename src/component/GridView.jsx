@@ -1,15 +1,15 @@
-import React, { useEffect, Suspense, lazy } from 'react'
+import React, { memo, useEffect } from 'react'
 import { useFilterContext } from '../context/filter_context'
 import Skelton from './skeleton-loading/Skelton';
 import { motion } from 'framer-motion'
 import './CSS/gridView.css';
 import '../App.css'
 import Pagination from './advance/advancePagination'
+import Product from '../component/Product'
 
-const GridView = ({ products }) => {
+const GridView = memo(({ products }) => {
 
     const { isLoading, currentPage, setCurrentPage } = useFilterContext();
-    const Product = lazy(() => import('../component/Product'))
 
     const containerVarient = {
         hidden: { opacity: 0 },
@@ -42,9 +42,7 @@ const GridView = ({ products }) => {
         </div>
 
     )
-    return (<Suspense fallback={<div>
-        loading...
-    </div>}>
+    return (<>
         <motion.div variants={containerVarient}
             initial='hidden'
             animate='show'
@@ -55,10 +53,9 @@ const GridView = ({ products }) => {
 
         </motion.div>
 
-
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={totalPages} />
-
-    </Suspense>)
-}
+    </>
+    )
+})
 
 export default GridView

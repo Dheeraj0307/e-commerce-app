@@ -4,7 +4,7 @@ const Pagination = ({ setCurrentPage, totalPages, currentPage }) => {
 
     const handlePageClick = (page) => {
         if (page !== currentPage) {
-            // window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: "smooth" });
             setCurrentPage(page);
         }
     };
