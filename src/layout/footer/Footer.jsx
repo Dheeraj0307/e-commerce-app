@@ -4,7 +4,7 @@ import { CiInstagram } from "react-icons/ci";
 import { FaYoutube } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
-import './CSS/footer.css'
+import './footer.css'
 
 const Footer = () => {
     const [input, setInput] = useState();

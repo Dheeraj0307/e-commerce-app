@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Star from '../component/Star';
 import { useNavigate } from 'react-router-dom';
 import FormatPrice from '../helpers/FormatPrice'

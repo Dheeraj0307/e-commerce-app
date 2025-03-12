@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ProductList from '../component/ProductList'
 import FilterSection from '../component/FilterSection'
 import Sort from '../component/Sort'
 import './css/products.css'
 
-const Products = ({ setShowNav }) => {
-
-    useEffect(() => { setShowNav(true) }, [setShowNav])
+const Products = () => {
 
     return (
         <>

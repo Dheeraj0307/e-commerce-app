@@ -6,7 +6,7 @@ import { ImCross } from "react-icons/im";
 import { FaBars } from "react-icons/fa";
 import { useCartContext } from '../../context/cart_context'
 
-export const ResponsiveNav = memo(({ setShowNav }) => {
+export const ResponsiveNav = memo(() => {
     const [toggleState, setToggleState] = useState(true);
     const menuRef = useRef(null)
 
@@ -19,7 +19,6 @@ export const ResponsiveNav = memo(({ setShowNav }) => {
             localStorage.removeItem('token')
         }
         navigate('/loginNew')
-        setShowNav(false)
     }
 
     const handleClick = () => {
@@ -39,11 +38,8 @@ export const ResponsiveNav = memo(({ setShowNav }) => {
 
     useEffect(() => {
         let handle = (e) => {
-            // console.log(e.target, "e");
-            // console.log(menuRef.current, "menuRef.current");
             if (menuRef.current && !menuRef.current.contains(e.target)) {
                 setToggleState(true);
-                // console.log(menuRef.current);
             }
         };
 
